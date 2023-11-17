@@ -10,6 +10,7 @@ class GraphIndex:
     def SetName(self,newName):
         self.name = newName
 
+# Deapth first search,
     def dfs(self,root):
         if root is None:
             return None
@@ -17,6 +18,7 @@ class GraphIndex:
         for node in root.getNextNode():
             self.dfs(node)
 
+# Breadth first search
     def bfs(self,root):
         if root is None:
             return None
@@ -27,7 +29,7 @@ class GraphIndex:
             print(node.getData())
             for node in node.getNextNode():
                 queue.append(node)
-
+# A* search
     def aStar(self,root):
         if root is None:
             return None

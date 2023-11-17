@@ -9,7 +9,36 @@ class BinaryTree:
     def SetName(self,newName):
         self.name = newName
         return self.name
+    def getRoot(self):
+        return self.root
+# All orderef traversal onganized in one function divided by type
+    def OrderTraversal(self,root,type):
+        if type == "inOrder":
+            if root:
+                self.OrderTraversal(root.getLeftNode())
+                print(root.getData())
+                self.OrderTraversal(root.getRightNode())
+        elif type == "preOrder":
+            if root:
+                print(root.getData())
+                self.OrderTraversal(root.getLeftNode())
+                self.OrderTraversal(root.getRightNode())
+        elif type == "postOrder":
+            if root:
+                self.OrderTraversal(root.getLeftNode())
+                self.OrderTraversal(root.getRightNode())
+                print(root.getData())
+    def searchNode(self,data):
+        if data == self.root.getData():
+            return self.root
+    def deapthFirstSearch(self,root):
+        if root is None:
+            return None
+        print(root.getData())
+        for node in root.getNextNode():
+            self.dfs(node)
 
+#Binary tree node structure with data and left and right nodes
 class BinaryTreeNode:
     def __int__(self,data):
         self.data = data

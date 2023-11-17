@@ -11,8 +11,8 @@ class HeapUtil():
         else:
             return 1
 
-    def maxheappush(heap, item):
+    def maxHeapPush(heap, item):
         heapq.heappush(heap, HeapUtil(item))
 
-    def maxheappop(heap):
+    def maxHeapPop(heap):
         return heapq.heappop(heap).x
