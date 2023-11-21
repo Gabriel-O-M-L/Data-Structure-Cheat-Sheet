@@ -31,7 +31,7 @@ class BinaryTree:
     def searchNode(self,data):
         if data == self.root.getData():
             return self.root
-    def deapthFirstSearch(self,root):
+    def dfs(self,root):
         if root is None:
             return None
         print(root.getData())
@@ -66,4 +66,3 @@ class BinaryTreeNode:
                     self.right.insert(data)
         else:
             self.data = data
-
