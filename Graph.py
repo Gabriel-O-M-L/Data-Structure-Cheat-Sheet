@@ -1,7 +1,7 @@
 import heapq
 # Graph structure index, for name and root
 class GraphIndex:
-    def __int__(self,name,root):
+    def __init__(self,name,root):
         self.name = name
         self.root = root
 
@@ -46,7 +46,7 @@ class GraphIndex:
 
 #Graph node structure with name and array of connected nodes
 class GraphNode:
-    def __int__(self,data):
+    def __init__(self,data):
         self.data = data
         self.nextNode = []
 
