@@ -1,5 +1,5 @@
 import unittest
-from BinaryTree import BinaryTree, BinaryTreeNode
+from pymodules.BinaryTree import BinaryTree, BinaryTreeNode
 
 class TestBinaryTree(unittest.TestCase):
     def setUp(self):
